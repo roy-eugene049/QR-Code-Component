@@ -1,43 +1,61 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Outfit', sans-serif;
-    font-size: 15px;
     background-color: hsl(212, 45%, 89%);
-    max-width: 1440px;
+    height: 100vh;
+    width: 100vw;
 }
 
-.container {
-    background-color: hsl(0, 0%, 100%);
-    margin: 0 auto;
-    max-width: 380px;
-    border-radius: 10px;
-    padding: 10px;
-}
 
-img[src*="images/image-qr-code.png"] {
-    max-width: 350px;
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100%;
 }
 
-.headline {
-    text-align: center;
-    font-size: 25px;
+main .container {
+    display: flex;
+    flex-direction: column;
+    width: 353px;
+    height: 535px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    
+}
+
+main .container .qrcode {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 17px;
+ 
+}
+
+main .container .qrcode img {
+    border-radius: 13px;
+}
+
+main .container .qrcode h1 {
+    text-align:center;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 1.5rem;
+    width: 267px;
     color: hsl(218, 44%, 22%);
 }
 
-.description {
+main span {
     text-align: center;
-    font-size: 15px;
-    padding: 0 40px;
-    padding-bottom: 20px;
-    color: hsl(220, 15%, 55%);
+    width: 267px;
+    color: hsl(220, 15%, 55%)
+ 
 }
 
 @media (max-width: 375px) {
@@ -46,6 +64,6 @@ img[src*="images/image-qr-code.png"] {
     }
 
     .headline {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
 }
